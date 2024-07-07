@@ -1,0 +1,20 @@
+    // Using While
+    unsigned int k = sumStringChars(v);
+    unsigned int hash = k % VACCINE_TABLE_SIZE;
+    int ind, cc = 0;
+
+    ind = (hash + (cc * cc)) % VACCINE_TABLE_SIZE;
+    cc += 1;
+
+    while(vaccineHashTable[ind] != ""){
+        ind = (hash + (cc * cc)) % VACCINE_TABLE_SIZE;
+        cc += 1;
+    };
+
+    // TODO: Quadratic probing
+    vaccineHashTable[ind] = v;
+    numVaccines++;
+    return;
+    }
+
+    // Using for
